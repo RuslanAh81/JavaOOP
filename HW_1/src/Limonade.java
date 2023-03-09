@@ -1,5 +1,5 @@
-public class Lemonade extends Drinks{
-    public Lemonade(double volume,String unitVolume, String name, int price,int quantity,String measure){
+public class Limonade extends Drinks{
+    public Limonade(double volume, String unitVolume, String name, int price, int quantity, String measure){
         super(volume,unitVolume, name, price, quantity, measure);
 
     }
