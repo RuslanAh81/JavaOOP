@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductBook <T> implements Serializable {
-    public String getName;
+//    public String getName;
     private List<T> listOfProducts = new ArrayList<T>();
 
     public ProductBook(T product){
