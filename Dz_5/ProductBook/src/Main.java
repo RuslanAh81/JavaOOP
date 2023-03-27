@@ -1,4 +1,3 @@
-import model.Model;
 import presenter.Presenter;
 import ui.View;
 import ui.Console;

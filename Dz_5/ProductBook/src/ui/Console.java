@@ -32,9 +32,25 @@ public class Console implements View {
         }
     }
 
+    public void  testBook(){
+        System.out.println("Заполнение продуктими");
+        System.out.println(presenter.testBook());
+    }
+
     private void printMenu(){
         System.out.println(menu.printMenu());
         //System.out.println(" Cons prntMen");
+    }
+
+    public void loadData() throws IOException, ClassNotFoundException{
+        System.out.println("Загрузка данных");
+        System.out.println(presenter.loadData());
+    }
+
+    public void saveData()throws IOException {
+        System.out.println("сохранение данных");
+        System.out.println(presenter.saveData());
+
     }
 
     public void addProduct(){

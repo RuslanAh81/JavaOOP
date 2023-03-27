@@ -1,33 +1,39 @@
 package model;
 
-public class ProductBook {
-    private String name;
-    private String price;
-    private int quantity; // Количество
-    public ProductBook (String name, String price, int quantity){
-        this.name = name;
-        this.price  = price;
-        this.quantity = quantity;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ProductBook <T> implements Serializable {
+    public String getName;
+    private List<T> listOfProducts = new ArrayList<T>();
+
+    public ProductBook(T product){
+        if(product != null){
+            listOfProducts.add(product);
+        }
     }
 
-    public String getName() {
-        return name;
+    public ProductBook(){
+        this(null);
+    }
+//    public T getProduct(String name){
+//        T productSearch = null;
+//        for( int i =0; i<listOfProducts.size(); i++){
+//            if(listOfProducts.get(i).getName().equals(name)){
+//                productSearch = listOfProducts.get(i);
+//            }
+//        }
+//        return productSearch;
+//    }
+
+    public void setProducts(T product){
+        listOfProducts.add(product);
     }
 
-    public String getPrice() {
-        return price;
+    public String toString(){
+        return listOfProducts.toString();
     }
 
-    public int getQuantity() {
-        return quantity;
-    }
 
-    @Override
-    public String toString() {
-        return "ProductBook{" +
-                "name='" + name + '\'' +
-                ", price='" + price + '\'' +
-                ", quantity=" + quantity +
-                '}';
-    }
 }

@@ -15,6 +15,8 @@ public class Menu {
         this.console = console;
         commands = new ArrayList<>();
         commands.add(new ZeroInput(console));
+        commands.add(new LoadData(console));
+        commands.add(new SaveData(console));
         commands.add(new AddProduct(console));
         commands.add(new RemoveProduct(console));
         commands.add(new UpdateProduct(console));
